@@ -17,7 +17,8 @@ class AsyncIO
 {
 public:
     virtual void AsyncIOManager();
-    static void* FileReader(void* params);      
+    static void* FileReader(void* params);
+    static void* FileWriter(void* params);
 
     int result_file_desc = open("./ResultFile.txt", O_WRONLY | O_APPEND, S_IRWXU);  
     std::string files_to_read[3] = {"./File1.txt", "./File2.txt", "./File3.txt"};
